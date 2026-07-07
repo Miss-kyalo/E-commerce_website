@@ -15,6 +15,14 @@
 //A checkout form with basic validation.
 //A responsive design that works on both desktop and mobile devices.
 
+//navbar-search button
+// Home button
+//categories
+//Contact/support butto
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -22,7 +30,57 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>STarlight E-commerce Center</title>
         <link rel="stylesheet" href="styles.css">
-
     </head>
+    <body>
+        <header>
+            <h1>STarlight E-commerce Center</h1>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#cart">Cart</a></li>
+                    <li><a href="#contact">Contact/Support</a></li>
+                </ul>
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search products...">
+                    <button id="searchButton">Search</button>
+                </div>
+            </nav>
+        </header>
+
+//category filters
+        <div class="filters">
+            <button class="filter-button-active" data-category="all">All Categories</button>
+            <button class="filter-button" data-category="electronics">Electronics</button>
+            <button class="filter-button" data-category="clothing">Clothing</button>
+            <button class="filter-button" data-category="accessories">Accessories</button>
+            <button class="filter-button" data-category="footwear">Footwear</button>
+        </div>
+
+//Product section
+        <section id="products-container" class="product-container"></section>
+            //shopping cart
+            <section id="cart" class="cart">
+                <h2>Shopping Cart</h2>
+                <div id="cartItemsContainer">
+                </div>
+                <p>Total: $<span id="totalPrice">0.00</span></p>
+                <button id="checkoutButton">Checkout</button>
+                </section>
+//Checkout form
+                <section id="checkout" class="checkout">
+                    <h2>Checkout</h2>
+                    <input type="text" id="name" placeholder="Name" required>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <input type="text" id="address" placeholder="Address" required>
+                    <button id="submitOrderButton">Submit Order</button>
+                </section>
+        
+
+
+
+
+    </body>
+
     <script src="script.js" defer></script>
 </html>
